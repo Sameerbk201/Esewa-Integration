@@ -1,0 +1,31 @@
+@base_url = http://localhost:9000
+
+### Create order
+POST {{base_url}}/api/esewa/createorder HTTP/1.1
+Content-Type: application/json
+
+{
+    "amount": 100,
+    "products": [
+        {
+        "product": "apple",
+        "amount": 100,
+        "quantity": 1,
+        },
+    ],
+};
+
+### Create order
+POST {{base_url}}/api/esewav1/createorderv1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "amount":100,
+    "products":[{"type":"watch","name":"epple2.1"}]
+}
+### get
+GET {{base_url}}/api/esewa/success HTTP/1.1
+### get
+GET {{base_url}}/api/esewa/getorders HTTP/1.1
+### get
+GET {{base_url}}/api/esewav1/getordersv1 HTTP/1.1
